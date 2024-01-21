@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(25,25,25);
+    color:white;
+}
+img {
+    height:90px;
+}
+.cartoons {
+    height: 100px;
+    background-color:transparent;
+    border-radius:40px;
+}

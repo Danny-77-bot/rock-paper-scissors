@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heads and tails</title>
+</head>
+<body>
+        <input type="text" placeholder="enter head or tail">
+        <button onCLick="
+         let result;
+         let computerChoice;
+        const p=document.querySelector('p');
+         let randnum=Math.random();
+         if(randnum<0.5) {
+          computerChoice='Heads'
+         }
+         else {
+            computerChoice='Tails'
+         }
+
+         let inputvalue=document.querySelector('input').value;
+            let firstletter=inputvalue.slice(0,1)
+            let restOfInput=inputvalue.slice(1);
+
+         const inputItem=firstletter.toLocaleUpperCase()+restOfInput.toLocaleLowerCase();
+
+          if(inputItem==='Heads' && computerChoice==='Heads') {
+            result='Draw'
+          }
+          else if (inputItem==='Heads' && computerChoice==='Tails') {
+            result='You Lose'
+          }
+        else if(inputItem==='Tails' && computerChoice==='Tails') {
+            rsult='Draw'
+        }
+        else if(inputItem==='Tails' && computerChoice==='Heads') {
+            result='You win'
+        }
+        p.innerHTML=`Your Choice ${inputItem},computer Choice ${computerChoice}
+        ${result}
+         `
+        ">check result</button>
+
+        <p></p>
+</body>
+</html>
